@@ -47,35 +47,30 @@
 
     }  
 
-  .image-container{
-      position:relative;
-      display:inline-block;
+    .loader-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff; /* Fully white background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
   }
-
-  .image-loader{
-      position:absolute;
-      top:50%;
-      left:50%;
-      transform:translate(-50%,-50%);
-      width:40px;
-      height:40px;
-      border:4px solid #18d26e;
-      border-top:4px solid transparent;
-      border-radius:50%;
-      animation:spin 1s linear infinite;
+  .login-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 5px solid green;
+      border-top: 5px solid transparent;
+      animation: spin 1s linear infinite;
   }
-
-  .image-container img{
-      display:none;
-      width:100%;
-      height:auto;
-  }
-
-  @keyframes spin{
-      to{
-          transform:translate(-50%,-50%) rotate(360deg);
-      }
-  }
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+  }       
 
   </style>
 
@@ -650,117 +645,96 @@
 
       <div class="row portfolio-container">
 
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/Python.jpeg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Basic Python from Tehran Institute Of Technology</h4>
-            <div class="portfolio-links">
-              <a href="img/Python.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Basic Python from Tehran Institute Of Technology"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/Python.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Basic Python from Tehran Institute Of Technology</h4>
+              <div class="portfolio-links">
+                <a href="img/Python.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Basic Python from Tehran Institute Of Technology"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/Advanced_Python.jpeg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Advanced Python from Tehran Institute Of Technology</h4>
-            <div class="portfolio-links">
-              <a href="img/Advanced_Python.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Advanced Python from Tehran Institute Of Technology"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/Advanced_Python.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Advanced Python from Tehran Institute Of Technology</h4>
+              <div class="portfolio-links">
+                <a href="img/Advanced_Python.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Advanced Python from Tehran Institute Of Technology"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/Python_Harvard_4mH8oB9.jpg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Python from Harvard University</h4>
-            <div class="portfolio-links">
-              <a href="img/Python_Harvard_4mH8oB9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Python from Harvard University"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/Python_Harvard_4mH8oB9.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Python from Harvard University</h4>
+              <div class="portfolio-links">
+                <a href="img/Python_Harvard_4mH8oB9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Python from Harvard University"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/photo_2025-07-31_14-08-57.jpg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Upper-Intermediate English from Safir Academy</h4>
-            <div class="portfolio-links">
-              <a href="img/photo_2025-07-31_14-08-57.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Upper-Intermediate English from Safir Academy"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/photo_2025-07-31_14-08-57.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Upper-Intermediate English from Safir Academy</h4>
+              <div class="portfolio-links">
+                <a href="img/photo_2025-07-31_14-08-57.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Upper-Intermediate English from Safir Academy"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/photo_2025-07-31_14-09-10.jpg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Django from Codeyad Institute</h4>
-            <div class="portfolio-links">
-              <a href="img/photo_2025-07-31_14-09-10.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Django from Codeyad Institute"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/photo_2025-07-31_14-09-10.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Django from Codeyad Institute</h4>
+              <div class="portfolio-links">
+                <a href="img/photo_2025-07-31_14-09-10.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Django from Codeyad Institute"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/ML_Certification.png" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Machine Learning from Codeyad Institute</h4>
-            <div class="portfolio-links">
-              <a href="img/ML_Certification.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Machine Learning from Codeyad Institute"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/ML_Certification.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Machine Learning from Codeyad Institute</h4>
+              <div class="portfolio-links">
+                <a href="img/ML_Certification.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Machine Learning from Codeyad Institute"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/AcvancedEnglishCertification.jpg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Advanced English from Safir Academy</h4>
-            <div class="portfolio-links">
-              <a href="img/AcvancedEnglishCertification.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Advanced English from Safir Academy"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/AcvancedEnglishCertification.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Advanced English from Safir Academy</h4>
+              <div class="portfolio-links">
+                <a href="img/AcvancedEnglishCertification.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Advanced English from Safir Academy"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
         
       </div>
     </div>
@@ -786,149 +760,124 @@
 
       <div class="row portfolio-container">
 
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/photo_2024-06-18_17-20-20.jpg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Yazdan Jafari | یزدان جعفری</h4>
-            <div class="portfolio-links">
-              <a href="img/photo_2024-06-18_17-20-20.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Yazdan Jafari | یزدان جعفری"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/photo_2024-06-18_17-20-20.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Yazdan Jafari | یزدان جعفری</h4>
+              <div class="portfolio-links">
+                <a href="img/photo_2024-06-18_17-20-20.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Yazdan Jafari | یزدان جعفری"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/photo_2024-06-18_17-20-13.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Yazdan Jafari | یزدان جعفری</h4>
+              <div class="portfolio-links">
+                <a href="img/photo_2024-06-18_17-20-13.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Yazdan Jafari | یزدان جعفری"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/photo_2024-06-18_17-20-24.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Yazdan Jafari | یزدان جعفری</h4>
+              <div class="portfolio-links">
+                <a href="img/photo_2024-06-18_17-20-24.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Yazdan Jafari | یزدان جعفری"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/photo_2025-03-08_19-57-46.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Yazdan Jafari | یزدان جعفری</h4>
+              <div class="portfolio-links">
+                <a href="img/photo_2025-03-08_19-57-46.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Yazdan Jafari | یزدان جعفری"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/photo_2025-03-08_19-57-50.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Yazdan Jafari | یزدان جعفری</h4>
+              <div class="portfolio-links">
+                <a href="img/photo_2025-03-08_19-57-50.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Yazdan Jafari | یزدان جعفری"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/a57e37b2-a056-4481-a83b-33544aab9724.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Yazdan Jafari | یزدان جعفری</h4>
+              <div class="portfolio-links">
+                <a href="img/a57e37b2-a056-4481-a83b-33544aab9724.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Yazdan Jafari | یزدان جعفری"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/f04c3e80-efad-4c57-9060-5faf3130e55b.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Yazdan Jafari | یزدان جعفری</h4>
+              <div class="portfolio-links">
+                <a href="img/f04c3e80-efad-4c57-9060-5faf3130e55b.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Yazdan Jafari | یزدان جعفری"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/3e5d7c7f-48d6-4545-acef-a0457ed9d800.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Yazdan Jafari | یزدان جعفری</h4>
+              <div class="portfolio-links">
+                <a href="img/3e5d7c7f-48d6-4545-acef-a0457ed9d800.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Yazdan Jafari | یزدان جعفری"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/94fdda6f-801e-48e0-9ab6-d8ace1aa1213.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Yazdan Jafari | یزدان جعفری</h4>
+              <div class="portfolio-links">
+                <a href="img/94fdda6f-801e-48e0-9ab6-d8ace1aa1213.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Yazdan Jafari | یزدان جعفری"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
 
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/photo_2024-06-18_17-20-13.jpg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Yazdan Jafari | یزدان جعفری</h4>
-            <div class="portfolio-links">
-              <a href="img/photo_2024-06-18_17-20-13.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Yazdan Jafari | یزدان جعفری"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/photo_2024-06-18_17-20-24.jpg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Yazdan Jafari | یزدان جعفری</h4>
-            <div class="portfolio-links">
-              <a href="img/photo_2024-06-18_17-20-24.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Yazdan Jafari | یزدان جعفری"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/photo_2025-03-08_19-57-46.jpg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Yazdan Jafari | یزدان جعفری</h4>
-            <div class="portfolio-links">
-              <a href="img/photo_2025-03-08_19-57-46.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Yazdan Jafari | یزدان جعفری"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/photo_2025-03-08_19-57-50.jpg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Yazdan Jafari | یزدان جعفری</h4>
-            <div class="portfolio-links">
-              <a href="img/photo_2025-03-08_19-57-50.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Yazdan Jafari | یزدان جعفری"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/a57e37b2-a056-4481-a83b-33544aab9724.jpeg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Yazdan Jafari | یزدان جعفری</h4>
-            <div class="portfolio-links">
-              <a href="img/a57e37b2-a056-4481-a83b-33544aab9724.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Yazdan Jafari | یزدان جعفری"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/f04c3e80-efad-4c57-9060-5faf3130e55b.jpeg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Yazdan Jafari | یزدان جعفری</h4>
-            <div class="portfolio-links">
-              <a href="img/f04c3e80-efad-4c57-9060-5faf3130e55b.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Yazdan Jafari | یزدان جعفری"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/3e5d7c7f-48d6-4545-acef-a0457ed9d800.jpeg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Yazdan Jafari | یزدان جعفری</h4>
-            <div class="portfolio-links">
-              <a href="img/3e5d7c7f-48d6-4545-acef-a0457ed9d800.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Yazdan Jafari | یزدان جعفری"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/94fdda6f-801e-48e0-9ab6-d8ace1aa1213.jpeg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Yazdan Jafari | یزدان جعفری</h4>
-            <div class="portfolio-links">
-              <a href="img/94fdda6f-801e-48e0-9ab6-d8ace1aa1213.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Yazdan Jafari | یزدان جعفری"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"></a>
-            </div>
-          </div>
-        </div>
-      </div>
         
         </div>
       </div>
@@ -954,165 +903,135 @@
 
       <div class="row portfolio-container">
 
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/My_resume.jpg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>My Resume</h4>
-            <div class="portfolio-links">
-              <a href="img/My_resume.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="My Resume"><i class="bx bx-plus"></i></a>
-              <!-- <a href="#" ><i class="bx bx-link"></i></a> -->
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/My_resume.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>My Resume</h4>
+              <div class="portfolio-links">
+                <a href="img/My_resume.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="My Resume"><i class="bx bx-plus"></i></a>
+                <!-- <a href="#" ><i class="bx bx-link"></i></a> -->
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/Anformatic.jpg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Anformatic University</h4>
-            <div class="portfolio-links">
-              <a href="img/Anformatic.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Anformatic University"><i class="bx bx-plus"></i></a>
-              <!-- <a href="#" ><i class="bx bx-link"></i></a> -->
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/Anformatic.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Anformatic University</h4>
+              <div class="portfolio-links">
+                <a href="img/Anformatic.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Anformatic University"><i class="bx bx-plus"></i></a>
+                <!-- <a href="#" ><i class="bx bx-link"></i></a> -->
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/windowmall.jpg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Window Mall</h4>
-            <div class="portfolio-links">
-              <a href="img/windowmall.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Window Mall"><i class="bx bx-plus"></i></a>
-              <!-- <a href="#" ><i class="bx bx-link"></i></a> -->
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/windowmall.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Window Mall</h4>
+              <div class="portfolio-links">
+                <a href="img/windowmall.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Window Mall"><i class="bx bx-plus"></i></a>
+                <!-- <a href="#" ><i class="bx bx-link"></i></a> -->
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/SEO.jpg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>SEO Courses</h4>
-            <div class="portfolio-links">
-              <a href="img/SEO.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SEO Courses"><i class="bx bx-plus"></i></a>
-              <!-- <a href="#" ><i class="bx bx-link"></i></a> -->
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/SEO.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>SEO Courses</h4>
+              <div class="portfolio-links">
+                <a href="img/SEO.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SEO Courses"><i class="bx bx-plus"></i></a>
+                <!-- <a href="#" ><i class="bx bx-link"></i></a> -->
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/Sorena.jpg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Sorena Cafe</h4>
-            <div class="portfolio-links">
-              <a href="img/Sorena.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sorena Cafe"><i class="bx bx-plus"></i></a>
-              <!-- <a href="#" ><i class="bx bx-link"></i></a> -->
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/Sorena.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Sorena Cafe</h4>
+              <div class="portfolio-links">
+                <a href="img/Sorena.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sorena Cafe"><i class="bx bx-plus"></i></a>
+                <!-- <a href="#" ><i class="bx bx-link"></i></a> -->
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/yoga.jpg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Yoga Exercises</h4>
-            <div class="portfolio-links">
-              <a href="img/yoga.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Yoga Exercises"><i class="bx bx-plus"></i></a>
-              <!-- <a href="#" ><i class="bx bx-link"></i></a> -->
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/yoga.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Yoga Exercises</h4>
+              <div class="portfolio-links">
+                <a href="img/yoga.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Yoga Exercises"><i class="bx bx-plus"></i></a>
+                <!-- <a href="#" ><i class="bx bx-link"></i></a> -->
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/citra.jpg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Citra Amusement Park</h4>
-            <div class="portfolio-links">
-              <a href="img/citra.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Citra Amusement Park"><i class="bx bx-plus"></i></a>
-              <!-- <a href="#" ><i class="bx bx-link"></i></a> -->
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/citra.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Citra Amusement Park</h4>
+              <div class="portfolio-links">
+                <a href="img/citra.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Citra Amusement Park"><i class="bx bx-plus"></i></a>
+                <!-- <a href="#" ><i class="bx bx-link"></i></a> -->
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/LeitnerLeitner.jpg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Leitner Box Game</h4>
-            <div class="portfolio-links">
-              <a href="img/LeitnerLeitner.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Leitner Box Game"><i class="bx bx-plus"></i></a>
-              <!-- <a href="#" ><i class="bx bx-link"></i></a> -->
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/LeitnerLeitner.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Leitner Box Game</h4>
+              <div class="portfolio-links">
+                <a href="img/LeitnerLeitner.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Leitner Box Game"><i class="bx bx-plus"></i></a>
+                <!-- <a href="#" ><i class="bx bx-link"></i></a> -->
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/e84dbf2c-ab94-4516-8a1b-5a8480e9ec7f.jpeg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Ali Mahmoodi CV</h4>
-            <div class="portfolio-links">
-              <a href="img/e84dbf2c-ab94-4516-8a1b-5a8480e9ec7f.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Ali Mahmoodi CV"><i class="bx bx-plus"></i></a>
-              <!-- <a href="#" ><i class="bx bx-link"></i></a> -->
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/e84dbf2c-ab94-4516-8a1b-5a8480e9ec7f.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Ali Mahmoodi CV</h4>
+              <div class="portfolio-links">
+                <a href="img/e84dbf2c-ab94-4516-8a1b-5a8480e9ec7f.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Ali Mahmoodi CV"><i class="bx bx-plus"></i></a>
+                <!-- <a href="#" ><i class="bx bx-link"></i></a> -->
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <div class="image-container">
-            <div class="image-loader"></div>
-            <img src="img/08bc7881-0a10-4d5d-9e8b-a1491a67e40e.jpeg" class="img-fluid" alt="" onload="this.previousElementSibling.style.display='none'; this.style.display='block';">
-          </div>
-          <div class="portfolio-info">
-            <h4>Tehran House Price Prediction (Machine Learning)</h4>
-            <div class="portfolio-links">
-              <a href="img/08bc7881-0a10-4d5d-9e8b-a1491a67e40e.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Tehran House Price Prediction (Machine Learning)"><i class="bx bx-plus"></i></a>
-              <!-- <a href="#" ><i class="bx bx-link"></i></a> -->
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="img/08bc7881-0a10-4d5d-9e8b-a1491a67e40e.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Tehran House Price Prediction (Machine Learning)</h4>
+              <div class="portfolio-links">
+                <a href="img/08bc7881-0a10-4d5d-9e8b-a1491a67e40e.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Tehran House Price Prediction (Machine Learning)"><i class="bx bx-plus"></i></a>
+                <!-- <a href="#" ><i class="bx bx-link"></i></a> -->
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
       </div>
     </div>
@@ -1171,20 +1090,19 @@
 
 
   <script>
-
-    document.querySelectorAll(".image-container img").forEach(img => {
-
-        if (img.complete) {
-            img.previousElementSibling.style.display = "none";
-            img.style.display = "block";
-        }
-
-        img.onload = function () {
-            this.previousElementSibling.style.display = "none";
-            this.style.display = "block";
-        };
+    function fetchData() {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                resolve("Data loaded");
+            });
+        });
+    }
+    
+    window.addEventListener("load", function() {
+        fetchData().then(() => {
+            document.getElementById("loader").style.display = "none";
+        });
     });
-
   </script>
 
 </body>
