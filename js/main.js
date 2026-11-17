@@ -217,6 +217,64 @@
   });
 
   /**
+   * Individual per-image loading state for secondary portfolio images
+   */
+  const setupIndependentImageLoaders = () => {
+    const images = document.querySelectorAll('.portfolio-wrap img');
+
+    images.forEach((img) => {
+      if (img.dataset.loaderBound === 'true') {
+        return;
+      }
+
+      img.dataset.loaderBound = 'true';
+
+      const shell = document.createElement('div');
+      shell.className = 'image-load-shell is-loading';
+
+      const spinner = document.createElement('div');
+      spinner.className = 'image-load-spinner';
+      spinner.setAttribute('aria-label', 'Loading image');
+
+      const errorBadge = document.createElement('div');
+      errorBadge.className = 'image-load-error';
+      errorBadge.textContent = '!';
+      errorBadge.setAttribute('aria-label', 'Image failed to load');
+
+      const parent = img.parentNode;
+      parent.insertBefore(shell, img);
+      shell.appendChild(img);
+      shell.appendChild(spinner);
+      shell.appendChild(errorBadge);
+
+      const markLoaded = () => {
+        shell.classList.remove('is-loading');
+        shell.classList.add('is-loaded');
+        img.style.opacity = '1';
+      };
+
+      const markError = () => {
+        shell.classList.remove('is-loading');
+        shell.classList.add('is-error');
+        img.style.opacity = '0.25';
+      };
+
+      img.style.opacity = '0';
+      img.style.transition = 'opacity 0.35s ease';
+
+      if (img.complete && img.naturalWidth > 0) {
+        markLoaded();
+        return;
+      }
+
+      img.addEventListener('load', markLoaded, { once: true });
+      img.addEventListener('error', markError, { once: true });
+    });
+  };
+
+  setupIndependentImageLoaders();
+
+  /**
    * Initiate portfolio lightbox 
    */
   const portfolioLightbox = GLightbox({
